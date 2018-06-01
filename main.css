@@ -1,6 +1,19 @@
 #article-tag-element {
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-around;
     flex-wrap: wrap;
+}
+
+.job-list-ul {
+    box-shadow: 4px 4px 3px grey;
+    border: 2px solid grey;
+    margin: 20px;
+    padding: 8px;
+    list-style-position: inside;
+
+}
+
+.job-list-ul li:first-child {
+    font-style: bold;
 }

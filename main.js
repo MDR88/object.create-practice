@@ -23,8 +23,6 @@ const jobObjectBuilder = (enumTF, writeTF, businessName, positionWorked, dateSta
         })
     return jobObject   
 }
-require('require')
-var randomWords = require('random-words');
 let testArray = []
 for (let i=0; i<100; i++) {
     testArray[i] = jobObjectBuilder(true, false, `${i}test`, `${i}test`, `${i}test`, `${i}test`)
@@ -60,7 +58,9 @@ jobObjectDiv.appendChild(articleTagElement)
 let listCounter = 0
 for (let j = 0; j < testArray.length; j++) {
     let jobListElement = document.createElement("ul")
-    jobListElement.setAttribute("id", `list${listCounter}`)
+    // jobListElement.setAttribute("id", `list${listCounter}`)
+    jobListElement.setAttribute("class", 'job-list-ul')
+    
     articleTagElement.appendChild(jobListElement)
     for (let i in testArray[j]) {
         let theValue = `${i}: ${testArray[j][i]}`
